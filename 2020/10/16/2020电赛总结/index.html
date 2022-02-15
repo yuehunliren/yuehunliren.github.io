@@ -1,0 +1,157 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>2020电赛总结 | YuehunLiren的小破站</title><meta name="keywords" content="比赛/生活总结"><meta name="author" content="YuehunLiren,yuehunliren@Outlook.com"><meta name="copyright" content="YuehunLiren"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="第一天晚上紧急到实验室策划方案，本以为很简单的MSP和Openmv就能搞定，才发现题目要求不能使用除TI的其他CPU，紧急寻找其他方案。利用CCD，配置CCS和MSP430Ware环境，学习MSP430库函数 通宵 10月10号早晨写好电机的驱动，睡觉，中午回来后写舵机，卡壳，舵机解决后本来想写编码器，可是因为MSP的单片机资源很少，而且我并不算特别熟悉它，在问了很多大佬的意见过后。我们决定先试试">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2020电赛总结">
+<meta property="og:url" content="https://yuehunliren.github.io/2020/10/16/2020%E7%94%B5%E8%B5%9B%E6%80%BB%E7%BB%93/index.html">
+<meta property="og:site_name" content="YuehunLiren的小破站">
+<meta property="og:description" content="第一天晚上紧急到实验室策划方案，本以为很简单的MSP和Openmv就能搞定，才发现题目要求不能使用除TI的其他CPU，紧急寻找其他方案。利用CCD，配置CCS和MSP430Ware环境，学习MSP430库函数 通宵 10月10号早晨写好电机的驱动，睡觉，中午回来后写舵机，卡壳，舵机解决后本来想写编码器，可是因为MSP的单片机资源很少，而且我并不算特别熟悉它，在问了很多大佬的意见过后。我们决定先试试">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+<meta property="article:published_time" content="2020-10-15T18:03:32.000Z">
+<meta property="article:modified_time" content="2022-02-14T09:09:53.970Z">
+<meta property="article:author" content="YuehunLiren">
+<meta property="article:tag" content="比赛&#x2F;生活总结">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yuehunliren.github.io/2020/10/16/2020%E7%94%B5%E8%B5%9B%E6%80%BB%E7%BB%93/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: true
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '2020电赛总结',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: true,
+  isToc: false,
+  postUpdate: '2022-02-14 17:09:53'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.0.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://s2.loli.net/2022/02/15/zukCHlOPRhJ6Saj.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">4</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">YuehunLiren的小破站</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">2020电赛总结</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-10-15T18:03:32.000Z" title="发表于 2020-10-16 02:03:32">2020-10-16</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-02-14T09:09:53.970Z" title="更新于 2022-02-14 17:09:53">2022-02-14</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="2020电赛总结"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>第一天晚上紧急到实验室策划方案，本以为很简单的MSP和Openmv就能搞定，才发现题目要求不能使用除TI的其他CPU，紧急寻找其他方案。利用CCD，配置CCS和MSP430Ware环境，学习MSP430库函数</p>
+<p><strong style="color:red;">通宵</strong></p>
+<p>10月10号早晨写好电机的驱动，睡觉，中午回来后写舵机，卡壳，舵机解决后本来想写编码器，可是因为MSP的单片机资源很少，而且我并不算特别熟悉它，在问了很多大佬的意见过后。我们决定先试试开环，我们想利用人为输入角度去控制电机的PWM，队友做CCD部分。我做除CCD的其他部分，交互，声音提示，电机驱动，话说MSP真的不算好用。也可能是我不会用，晚上准备开始搭建小车的硬件部分了。利用之前的平衡车开的板子。杜邦线引接，上电池后，发现只有一边的电机转动，在排除软件，小车板子，电源的问题后，我们发现应该是杜邦线的问题，唉。杜邦线是真的又爱又恨。帮另一组的朋友调ADC，最后应该算是能用。晚上实在不行了，4点睡下，早上起来准备把交互的代码再优化优化(之前就一直不行，进不了中断)，例程真的有毒！！！最后又发现OLED不行了？？？我整吐了，OLED不停的闪。在换了MCU，OLED，两组杜邦线后，发现还是杜邦的问题？？？？真的吐了！看来有时候杜邦线也是让人又爱又恨啊。</p>
+<p>最后我在做交互的时候发现，原来不是例程有毒，是因为外部中断的总中断开关我没有打开，我用库函数的方式打开后按键就能进入外部中断了。但是发现按键没有做消抖，使用起来简直不要太友好（笑哭.jpg）而我傻乎乎的在中断里加了延时函数（事实证明当时还挺正常的，hhh，后来就不行了，妈的在中断处理函数里加延时函数真的只有我这种菜鸟才做的出来），基本上我和我队友就开始调试小车了，说实话，现在已经是电赛完了，具体的细节我也记不太清了，毕竟熬夜了几天，脑子确实不太清醒，我只记得起来，我们在先使用舵机车，发现效果就是不好，也不清楚是为什么，看到另一组的朋友直接用双驱带2个万向轮做的很不错，我们便赶紧改变，最后发现也没做好，最后还是换回了舵机，其实现在想起来，有时候坚持自己的东西也许才是最好的，害，哦对了，我们最后没用CCD去做小车的“眼睛”，CCD在大家实验后都不太调得出来（只有几组大佬做出来了，但是他们也是加了补光片），我们最后采用的是红外对管，其实效果也是不错的，多加几个就好使了，我们那天晚上我记得我做了MSP430的ADC采样，用库函数搞定的，其实我也没想到我能那么快就把代码写出来，hhh。其实也是看着代码然后自己一步步改的，最后发现不用CCD了，那自然ADC采样也白做了，呜呜呜。。。算了，ADC也不算太复杂的东西，放弃ADC后我们就开始正式调试小车了。</p>
+<p>我们开始调试得时候发现我们得小车就是比别人得车跑得快，而且在转那个90°的弯的时候转不过去，就卡在哪了，感觉是电机没力，我们一开始是觉得是软件得问题，我们先把初始速度得PWM调低。把转弯时候得PWM调高，然后我们就发现小车就动不了，就卡在出发点不动，得用手轻轻推一下才会动，而且速度贼快，但是90°的弯还是转不过去，我们就在这上面一直测试，一直改代码。小车起步的时候要么不动，要么就动的飞快，根本找不到一个平衡点。我们想到给小车一个出发时的大的速度先让他动起来，然后再降低占空比达到减速的目的，然后在转弯的时候再调高占空比，至少能让小车转过去，想的挺好的，代码也实现了，但是车还是老样子，我们就一直在这上面纠结，其他起步比我们慢的组都已经可以达到平面上的转弯且停止了，说实话心里还是挺急的，我们反复的测试，反复的上电让小车跑，基本上测试了一个通宵吧，最后的效果，就是有时候车表现挺好的，有时候挺差的，意思就它表现得怎么样完全是<strong style="color:red;">随机</strong>的事件，然后我们就暂时认定我们完成了平面上的任务，然后我咨询了同一间教室的学长，他们说他们利用编码器测得了数据做了一个简单的闭环控制，编码器的使用没那么复杂，然后我就去学习怎么使用MSP430读编码器的数据，就是利用外部中断读取高低电平的变化，因为我们的车是只用往前走嘛，不用后退，所以最复杂的正交解码用不上，计算这个速度就不算很麻烦，记录脉冲个数就行，最后我也没想到我能把数据拿到并且显示在OLED上，（听另一组的朋友说，比赛真的很锻炼人，以前自己认为很难的东西，现在做起来也就那么回事）。</p>
+<p>早上（10月13日），今天是最后一天，今天晚上8点作品就要封箱。我们早上起来（做完编码我睡了1个多小时），发现车又发疯了，对，凌晨的时候还是好好的，起码有概率完成任务，现在是根本起步的时候不动，转弯也完成不了，说实话，心态挺炸的，我们一直在排查问题，直到11点的时候，队友突然说了句，电池还有电吗？我赶紧拿BB响测试了一下电池的电压，发现本来电压应该是12V左右的电池，现在的电压只有10V，我们恍然大悟，为啥昨天车转弯，起步动不了，是因为电池的电压不够，赶紧换了一个新的12V的电池，就发现车能动了，因为代码是根据10V的电池改的，不适应12V的电池，我们又改代码。</p>
+<p>改到下午1点过，开始测试，我们一直调试到5点过，其中的心酸，真的是让我想要流泪，我们的效果越来越差，越来越崩，电池还是好好的，中途我都冲队友发火，我说，干脆弃赛算了，不想做了，然后我就去趴着休息了。可是趴一会我又起来看看效果，还是根本没差别，真的那个时候我感觉真的太难受了，是真的心态都炸了，感觉自己付出了这么多可是最后连最基本的任务都完不成，我们在题目出来的那天晚上我就过来实验室着手准备，真的是不分昼夜的连轴转，可是最后的结果真的让人失望，我不知道怎么形容那种感觉，估计真的只有自己体会了才能明白吧，从8月初就来到学校培训。自己坚持了2个月，这样的结果我是不能接受的，距离封箱时间还剩2个多小时，基本上，我们已经算放弃了，我看着队友，队友埋头，我知道大家都不好受，最后指导老师到我们这来，了解情况后，问我们要不要用OpenMv试试（最后的时候告诉我们好像可以用？？？？），我跟他解释，我们的红外是没问题的，非常灵敏，但是问题出在小车的电机上（我指着两个电机我都快哭出来了），老师说要不要用一个稳压把12V降到10V然后再用上午的代码。他说叫我们尽量做吧，他会给我们争取时间。当时真的感觉很感动，至少老师还没放弃我们。突然，另一个队友说，我们的这个电机跟别人的不一样，我们的电机的减速比是1：10，是竞速用的电机，速度快但是力气不大！，我们听了觉得很有道理，赶紧着手换电机（距离8点已经不到1个半小时），幸好之前做平衡车，有减速比1：30的电机（这个平衡车还是灰灰的，谢谢灰灰），我们换电机过后测试，发现真的，小车速度慢了下来而且转弯有力了，我们赶紧把代码全部更新，重新根据实际情况调整PWM.做的很快，途中，老师跟我们说，叫我们尽快做，不要担心时间，我们最后9点半，做到了第三题（10°）就没时间调车了。我们赶紧封箱。上交作品。上交完后，我们几个都没说话。默默收拾东西回到了宿舍……….</p>
+<p><strong style="color:red;">后记</strong>：如果能早点发现电池和电机的问题，也许我们能做完更多的题，但是比赛就是这样，后来跟灰灰聊到这个事，他说“其实就是车的题目做少了，像我们做飞思卡尔，这种问题是一眼就能看出来的”，对啊，自己的经历还不够，还是太年轻了，说实话，这次比赛挺遗憾的，自己付出了很多，4天4夜睡眠总时间不超过15个小时。我感觉我们真的已经尽力了，可是真的结果不尽人意吧。15日下午去测评了，我们的车就是10°不行，如果再把前面的舵机的角度转大一点，也许我们就能完成10°，可能20°也可以尝试，可是，我们当时没有时间了。哎，这次比赛让我知道了自己的路还很长，自己还要努力加油。</p>
+<p><img src="https://s2.loli.net/2022/02/14/BAI7disOgtLTDb4.jpg" alt="2020"></p>
+<p><img src="https://s2.loli.net/2022/02/14/nousQaUx1jS3vli.jpg" alt="20201017114749"></p>
+<p><strong>以一句自己喜欢的文言结尾吧</strong>：&#x3D;&#x3D;尽吾志也而不能至者，可以无悔矣，其孰能讥之乎？此余之所得也&#x3D;&#x3D;.</p>
+<p>以后要更加<strong>努力</strong>才行啊，冲冲冲！！！！</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:yuehunliren@Outlook.com">YuehunLiren</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://yuehunliren.github.io/2020/10/16/2020%E7%94%B5%E8%B5%9B%E6%80%BB%E7%BB%93/">https://yuehunliren.github.io/2020/10/16/2020%E7%94%B5%E8%B5%9B%E6%80%BB%E7%BB%93/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://yuehunliren.github.io" target="_blank">YuehunLiren的小破站</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%AF%94%E8%B5%9B-%E7%94%9F%E6%B4%BB%E6%80%BB%E7%BB%93/">比赛/生活总结</a></div><div class="post_share"><div class="social-share" data-image="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2021/09/23/Vscode%E6%90%AD%E5%BB%BAC%E5%92%8CC++%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"><img class="next-cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Vscode搭建C/C++开发环境</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://s2.loli.net/2022/02/15/zukCHlOPRhJ6Saj.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">YuehunLiren</div><div class="author-info__description">个人学习博客</div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">4</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/yuehunliren" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="/yuehunliren@Outlook.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://space.bilibili.com/440741489" target="_blank" title="Bilibili"><i class="fa-brands fa-bilibili"></i></a><a class="social-icon" href="https://s2.loli.net/2022/02/15/Y9hyE3IVUuRxg4q.png" target="_blank" title="QQ"><i class="fa-brands fa-qq"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/02/15/hello-world/" title="Hello World"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"/></a><div class="content"><a class="title" href="/2022/02/15/hello-world/" title="Hello World">Hello World</a><time datetime="2022-02-15T09:32:34.871Z" title="发表于 2022-02-15 17:32:34">2022-02-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/02/01/Gitlearn/" title="廖雪峰Git学习过程"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="廖雪峰Git学习过程"/></a><div class="content"><a class="title" href="/2022/02/01/Gitlearn/" title="廖雪峰Git学习过程">廖雪峰Git学习过程</a><time datetime="2022-02-01T08:03:32.000Z" title="发表于 2022-02-01 16:03:32">2022-02-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/09/23/Vscode%E6%90%AD%E5%BB%BAC%E5%92%8CC++%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/" title="Vscode搭建C/C++开发环境"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Vscode搭建C/C++开发环境"/></a><div class="content"><a class="title" href="/2021/09/23/Vscode%E6%90%AD%E5%BB%BAC%E5%92%8CC++%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/" title="Vscode搭建C/C++开发环境">Vscode搭建C/C++开发环境</a><time datetime="2021-09-23T10:37:59.000Z" title="发表于 2021-09-23 18:37:59">2021-09-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/10/16/2020%E7%94%B5%E8%B5%9B%E6%80%BB%E7%BB%93/" title="2020电赛总结"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2020电赛总结"/></a><div class="content"><a class="title" href="/2020/10/16/2020%E7%94%B5%E8%B5%9B%E6%80%BB%E7%BB%93/" title="2020电赛总结">2020电赛总结</a><time datetime="2020-10-15T18:03:32.000Z" title="发表于 2020-10-16 02:03:32">2020-10-16</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By YuehunLiren</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
